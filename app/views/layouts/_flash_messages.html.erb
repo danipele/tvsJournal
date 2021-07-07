@@ -3,9 +3,9 @@
     <div class="alert flash-msg flash-<%= type %>">
       <% if msg.is_a? Array %>
         <% msg.each { |m| %><p><%= m.downcase %></p><%}
-          else %>
-            <%= msg.downcase %>
-          <% end %>
+      else %>
+        <%= msg.downcase %>
+      <% end %>
     </div>
   <% end %>
 </div>
