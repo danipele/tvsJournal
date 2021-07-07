@@ -1,0 +1,38 @@
+$primary-color: #212529;
+
+.navbar {
+  padding: 10px 50px;
+  .navbar-brand {
+    font-size: xxx-large;
+  }
+  .btn-navbar {
+    border: 0;
+    border-radius: 0;
+    margin-left: 10px;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .unhovered-btn {
+    color: #666666;
+  }
+}
+
+.home-header {
+  height: 600px;
+  .title {
+    font-size: 72px;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .subtitle {
+    font-size: 24px;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+  }
+}

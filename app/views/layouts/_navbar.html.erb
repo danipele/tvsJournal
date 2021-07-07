@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-dark" data-controller="navbar">
+  <a class="navbar-brand" href="/">tvsJ</a>
+  <div>
+    <% navbar_button_names.each do |button_name| %>
+      <button class="btn btn-outline-light btn-navbar" data-navbar-target="button"
+              data-action="mouseover->navbar#hover_button mouseout->navbar#unhover_button">
+        <%= button_name %>
+      </button>
+    <% end %>
+  </div>
+</nav>

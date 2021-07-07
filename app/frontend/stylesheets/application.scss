@@ -1,2 +1,35 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import "dashboard";
+
+body {
+  font-family: Consolas, monospace, serif;
+  background-color: $primary-color;
+  color: white;
+}
+
+html {
+  background-color: $primary-color;
+  color: white;
+}
+
+.flash-msg {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  margin: auto auto 20px;
+}
+
+.flash-alert {
+  color: red;
+}
+
+.flash-notice {
+  color: green;
+}
+
+.navbar-menu {
+  display: flex;
+}
