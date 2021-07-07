@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    registrations: 'registrations',
-    sessions: 'sessions',
-    passwords: 'passwords',
-    confirmations: 'confirmations'
+    registrations: 'devise_auth/registrations',
+    sessions: 'devise_auth/sessions',
+    passwords: 'devise_auth/passwords',
+    confirmations: 'devise_auth/confirmations'
   }
 
   root 'dashboard#home'
