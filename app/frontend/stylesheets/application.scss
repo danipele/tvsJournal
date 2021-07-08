@@ -34,3 +34,15 @@ html {
 .navbar-menu {
   display: flex;
 }
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
