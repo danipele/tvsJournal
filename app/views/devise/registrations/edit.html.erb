@@ -1,34 +1,37 @@
 <div class="account">
-  <h1>hello <%= current_user.first_name %> <%= current_user.last_name %>,</h1>
-  <h4>welcome to your tv show journal account</h4>
-  <br />
-  <br />
+  <%= turbo_frame_tag :account_info do %>
+    <%= render 'layouts/flash_messages' %>
+    <h1>hello <%= current_user.first_name %> <%= current_user.last_name %>,</h1>
+    <h4>welcome to your tv show journal account</h4>
+    <br />
+    <br />
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
-    <div data-controller="account">
-      <div class="field">
-        <%= f.label :email, 'email' %><br />
-        <%= f.email_field :email, autocomplete: "email", class: 'long-input account-info-input',
-                          'data-account-target': 'input', 'data-action':'click@window->account#reveal_input' %>
+      <div data-controller="account">
+        <div class="field">
+          <%= f.label :email, 'email' %><br />
+          <%= f.email_field :email, autocomplete: "email", class: 'long-input account-info-input',
+                            'data-account-target': 'input', 'data-action':'click@window->account#reveal_input' %>
+        </div>
+
+        <div class="field margin-top">
+          <%= f.label :first_name, 'first name' %><br />
+          <%= f.text_field :first_name, autocomplete: "first-name", class: 'long-input account-info-input',
+                           'data-account-target': 'input', 'data-action':'click@window->account#reveal_input' %>
+        </div>
+
+        <div class="field margin-top">
+          <%= f.label :last_name, 'last name' %><br />
+          <%= f.text_field :last_name, autocomplete: "last-name", class: 'long-input account-info-input',
+                           'data-account-target': 'input', 'data-action':'click@window->account#reveal_input' %>
+        </div>
       </div>
 
-      <div class="field margin-top">
-        <%= f.label :first_name, 'first name' %><br />
-        <%= f.text_field :first_name, autocomplete: "first-name", class: 'long-input account-info-input',
-                         'data-account-target': 'input', 'data-action':'click@window->account#reveal_input' %>
+      <div class="actions margin-top">
+        <%= f.submit "update info", class: 'btn btn-outline-light submit-btn align-center long-input' %>
       </div>
-
-      <div class="field margin-top">
-        <%= f.label :last_name, 'last name' %><br />
-        <%= f.text_field :last_name, autocomplete: "last-name", class: 'long-input account-info-input',
-                         'data-account-target': 'input', 'data-action':'click@window->account#reveal_input' %>
-      </div>
-    </div>
-
-    <div class="actions margin-top">
-      <%= f.submit "update info", class: 'btn btn-outline-light submit-btn align-center long-input' %>
-    </div>
+    <% end %>
   <% end %>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
