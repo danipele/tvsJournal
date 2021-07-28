@@ -7,6 +7,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'byebug', platforms: %i[mri mingw x64_mingw]
 gem 'capybara', '>= 3.26'
 gem 'devise'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'hotwire-rails'
 gem 'jbuilder', '~> 2.7'
 gem 'listen', '~> 3.3'
